@@ -1,0 +1,92 @@
+/*
+	Flexbox stylesheet för Hermods uppdrag 2
+*/
+
+
+body
+	{
+		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+	}
+
+h1
+	{
+		font-size: large;
+		font-weight: bolder;
+	}	
+
+h2
+	{
+		font-size: larger;
+	}
+
+.flexbox-container
+	{
+		display: flex;
+		flex-direction: column;
+	}	
+
+.flexbox-menu-bar
+	{
+		background: lightblue;
+		display: flex;
+		justify-content: flex-start;
+		box-sizing: border-box;
+		border-radius: 5px;
+		padding: 10px;
+		height: 40px;
+		font-size: larger;
+	}
+
+.flexbox-menu-item-title
+	{
+  		font-weight: 600;
+		margin: 10px;
+	}
+
+.flexbox-menu-item
+	{	
+		flex-grow: 1;
+		flex-basis: 100%;
+		margin: 20px;
+	}
+	
+a:hover
+	{
+  		background-color: yellow;
+	}
+
+.flexbox-content-item
+	{	
+		flex-grow: 1;
+		font-size: medium;
+	}
+
+.media
+	{
+    	display: flex;
+    	align-items:flex-start;
+    	background: #f0dca6;
+    	border-radius: 3px;
+    	margin: 20px;
+  	}
+  
+.media-object
+  	{
+    	margin-left: 1em;
+		order: 1;
+		max-width: 300px;
+		padding: 10px;
+  	}
+
+.heading
+	{
+    	margin: 0 0 .5em;
+	}
+ 
+.media-body
+	{
+    	flex: 1;
+		font-size: medium;
+		padding: 10px;
+	}
+	
