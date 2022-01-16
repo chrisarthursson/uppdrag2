@@ -5,88 +5,104 @@
 
 body
 	{
-		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		margin: 0; /* reset: you don't want standard margins decided by browser */
 	}
 
 h1
 	{
 		font-size: large;
 		font-weight: bolder;
-	}	
+	}
 
 h2
 	{
 		font-size: larger;
 	}
 
+.container {
+	margin: 0 auto;
+	max-width:1200px;
+}
 .flexbox-container
 	{
 		display: flex;
 		flex-direction: column;
-	}	
+	}
 
 .flexbox-menu-bar
 	{
 		background: lightblue;
 		display: flex;
-		justify-content: flex-start;
+		/*justify-content: flex-start; fine, but not needed as default */
 		box-sizing: border-box;
 		border-radius: 5px;
-		padding: 10px;
-		height: 40px;
+		/*padding: 10px; in principle fine, but given the margins of the child elements not necessary*/
+		/*height: 40px; better no fixed height; should be responsive to for instance font-size choice in users' browsers */
 		font-size: larger;
+		margin:0.5%;
 	}
 
 .flexbox-menu-item-title
 	{
   		font-weight: 600;
-		margin: 10px;
+		/*margin: 10px;*/
 	}
 
 .flexbox-menu-item
-	{	
-		flex-grow: 1;
-		flex-basis: 100%;
+	{
+		/*flex-grow: 1;
+		flex-basis: 100%;*/
 		margin: 20px;
 	}
-	
+
 a:hover
 	{
   		background-color: yellow;
 	}
 
 .flexbox-content-item
-	{	
+	{
 		flex-grow: 1;
 		font-size: medium;
 	}
 
-.media
+.media /* do you HAVE to use flexbox for this assignment? not ideal here (images falls offscreen and out of container on small screens). better have a floating images */
 	{
-    	display: flex;
-    	align-items:flex-start;
+    	/*display: flex;
+    	align-items:flex-start;*/
     	background: #f0dca6;
     	border-radius: 3px;
-    	margin: 20px;
-  	}
-  
-.media-object
-  	{
-    	margin-left: 1em;
-		order: 1;
-		max-width: 300px;
-		padding: 10px;
+	/*	margin: 20px; think about mobile devices, 20px may be too large (you may prefer 0 on small screens!)
+                You can use media queries to have different rules for different devices
+                or use percentages or something like that */
+		margin: 1%;
   	}
 
+.media-object
+  	{
+		/*margin-left: 1em;
+    	order: 1;*/
+		width: 300px;/*if you make it standard width instead of max-width, and set max-width to 100%, you cater for small screens as well*/
+		max-width: 100%;
+		padding: 10px;
+		box-sizing: border-box;
+  	}
+.media-object.float-right {
+	float:right;
+}
+.media-object.float-left {
+	float:left;
+}
 .heading
 	{
     	margin: 0 0 .5em;
 	}
- 
+
 .media-body
 	{
-    	flex: 1;
+    	/*flex: 1;*/
 		font-size: medium;
 		padding: 10px;
 	}
-	
+
