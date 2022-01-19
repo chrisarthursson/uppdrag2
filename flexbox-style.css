@@ -3,79 +3,90 @@
 */
 
 
-body
-	{
-		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-		font-size: 1.4em;
-		margin: 0;
-	}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+h2 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 2em;
+    border-bottom: 1px solid #ffa700;
+}
 
 .container {
-	margin: 0 auto;
-	max-width:1200px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
-.flexbox-container
-	{
-		display: flex;
-	}
 
-.flexbox-menu-bar
-	{
-		background: lightblue;
-		justify-content: flex-start;
-		box-sizing: border-box;
-		border-radius: 5px;
-		font-size: larger;
-		margin:0.5%;
-	}
+.flexbox-container {
+    display: flex;
+    background: #8ec8db;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0.5%;
+}
 
-.flexbox-menu-item-title
-	{
-  		font-weight: 600;
-	}
+nav a {
+    padding: 20px;
+}
+a[role="button"]{
+    background-color:#ff6c00;
+    font-weight: bold;
+    padding: 8px;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+}
+a[role="button"]:hover {
+    background-color: #167cc8;
+}
+a.flexbox-menu-item {
+    text-decoration: none;
+    color: #1268a8;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 1px rgba(255, 255, 255, 0.3) solid;
+    border-right: 1px rgba(255, 255, 255, 0.3) solid;
+    transition: background-color 0.2s linear;
+}
 
-.flexbox-menu-item
-	{
-		margin: 20px;
-	}
+a.flexbox-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
 
-a:hover
-	{
-  			background-color: lightskyblue;
-	}
+.media {
+    background: #fff7b8;
+    border-radius: 3px;
+    margin: 1%;
+    padding: 1em;
+}
 
-.flexbox-content-item
-	{
-		font-size: medium;
-	}
+.media-object {
+    max-width: 50%;
+    margin: 10px;
+    margin-left: 24px;
+    box-sizing: border-box;
+}
 
-.media
-	{
-    	background: #f0dca6;
-    	border-radius: 3px;
-		margin: 1%;
-  	}
-
-.media-object
-  	{
-		max-width: 50%;
-		margin: 10px;
-		box-sizing: border-box;
-  	}
 .media-object.float-right {
-	float:right;
+    float: right;
 }
-.media-object.float-left {
-	float:left;
-}
-.heading
-	{
-    	margin: 0 0 .5em;
-	}
 
-.media-body
-	{
-		font-size: medium;
-		padding: 10px;
-	}
+.media-object.float-left {
+    float: left;
+}
+
+.heading {
+    margin: 0 0 .5em;
+}
+
+.media-body {
+    font-size: medium;
+    padding: 10px;
+}
 
